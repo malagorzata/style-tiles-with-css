@@ -1,8 +1,6 @@
 /* change these */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&family=Playfair+Display&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,15 +12,17 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #f4cfb2;
+  --link-color: #2c6c5f;
+  --link-hover-color: #e94933;
+  --color-4: #f5d448;
+  --color-5: #f19199;
+  --color-6: #67a3ae;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
-  --main-text-color: #000;
+  --primary-font: "Josefin Sans", sans-serif;
+  --secondary-font: "Playfair Display", serif;
+  --main-text-color: #2c6c5f;
+  --secondary-text-color: black;
 
   --white-space: 1rem;
 }
@@ -34,8 +34,11 @@ a {
   transition: all 3s;
 }
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  -moz-transform: scale(1.1) translate(-3px, -1px);
+  -webkit-transform: scale(1.1) translate(-3px, -1px);
+  -o-transform: scale(1.1) translate(-3px, -1px);
+  -ms-transform: scale(1.1) translate(-3px, -1px);
+  transform: scale(1.1) translate(-3px, -1px);
 }
 
 button:active {
@@ -44,7 +47,7 @@ button:active {
 
 a:hover {
   color: var(--link-hover-color);
-  font-size: 4rem;
+  font-size: 2rem;
 }
 html {
   font-size: 100%;
@@ -145,6 +148,10 @@ ul li:last-child {
   background-color: var(--color-5);
 }
 
+.color-swatch-6 {
+  background-color: var(--color-6);
+}
+
 .textures li {
   height: 30vw;
   width: 40%;
@@ -195,7 +202,16 @@ button {
 }
 
 .secondary-button {
-  background: var(--color-5);
+  background: var(--color-6);
+}
+.primary-button:hover {
+  -webkit-box-shadow: 5px 5px 0px 1px var(--bg-color);
+  box-shadow: 5px 5px 0px 1px var(--color-4);
+}
+
+.secondary-button:hover {
+  -webkit-box-shadow: 5px 5px 0px 1px var(--bg-color);
+  box-shadow: 5px 5px 0px 1px var(--color-5);
 }
 
 button:focus,
@@ -209,6 +225,10 @@ button:focus-within {
   color: var(--main-text-color);
 }
 
+.typography-sample {
+  color: var(--secondary-text-color);
+}
+
 .h1-sample {
   font-size: 2.4rem;
   font-weight: bold;
@@ -216,8 +236,9 @@ button:focus-within {
 
 .h2-sample {
   font-family: var(--secondary-font);
-  font-style: italic;
   font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 p.typography-sample {
@@ -272,8 +293,9 @@ footer {
 
   .swatches li {
     margin-right: 3%;
-    height: 10vw;
-    width: 20%;
+    height: 5.5vw;
+    width: 50%;
+    border-radius: 50%;
   }
 
   .textures li {
