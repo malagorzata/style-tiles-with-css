@@ -210,7 +210,18 @@ ul li:last-child {
   color: var(--main-text-color);
 }
 
+.third-button {
+  background: var(--bg-color);
+  color: var(--color-1);
+  opacity: 100%;
+}
+
 .secondary-button:hover {
+  color: var(--bg-color);
+}
+
+.third-button:hover {
+  background: var(--color-1);
   color: var(--bg-color);
 }
 
